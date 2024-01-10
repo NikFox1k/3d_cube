@@ -31,7 +31,7 @@ body {
 }
 
 
-@keyframes anim_cube {
+@keyframes anim_cubed {
 	0% {
 		transform: rotateX(-20deg) rotateY(0deg);
 	}
@@ -68,6 +68,7 @@ body {
 	border: 20px solid #ffa20d;
 	box-shadow: 0px 0px 100px #a06f00
 }
+.cube .big span.
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .minicube .big .bottom {
@@ -103,7 +104,7 @@ body {
 }
 
 
-@keyframes anim_minicube {
+@keyframes anim_minicubef {
 	0%{
 		transform: rotateX(-20deg) rotateY(360deg);
 	}
@@ -152,4 +153,6 @@ body {
 	border: 20px solid #ffa20d;
 	box-shadow: 0px 0px 100px #a06f00
 }
+
 /*-webkit-text-stroke:2px black;*/
+
