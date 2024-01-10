@@ -11,13 +11,15 @@ body {
 	min-height: 100vh;
 	background: linear-gradient(145deg, #4914ac, #8c12d8);
 }
+
 .cube {
 	position: absolute;
 	width: 600px;
 	height: 600px;
-transform: scale(70%)
+	transform: scale(70%)
 }
-.cube .big{
+
+.cube .big {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -25,15 +27,22 @@ transform: scale(70%)
 	height: 100%;
 	transform-style: preserve-3d;
 	animation: anim_cube 30s linear infinite;
-    transform: rotateX(-20deg)
-		rotateY(25deg);
+	transform: rotateX(-20deg) rotateY(25deg);
 }
 
 
-@keyframes anim_cube{
+@keyframes anim_cube {
+	0% {
+		transform: rotateX(-20deg) rotateY(0deg);
+	}
+
+	100% {
+		transform: rotateX(-20deg) rotateY(360deg);
+	}
 
 }
-.cube .big span{
+
+.cube .big span {
 	position: absolute;
 	width: 600px;
 	height: 600px;
@@ -42,4 +51,104 @@ transform: scale(70%)
 	transition: .5s;
 	transform: rotateY(calc(90deg * var(--i))) translateZ(299px);
 
+}
+
+.cube .big span.top {
+	transform: rotateX(90deg) translateZ(299px);
+
+}
+
+.cube .big span.bottom {
+	transform: rotateX(90deg) translateZ(-299px);
+
+}
+
+.cube .big span {
+	background: transparent;
+	border: 20px solid #ffa20d;
+	box-shadow: 0px 0px 100px #a06f00
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.minicube .big .bottom {
+	transform: rotatex(90deg) translateZ(-299px)
+}
+
+.minicube .big .top::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	transform: translateZ(-650px);
+	background: rgba(0, 0, 0, 0.5);
+	filter: blur(60px);
+}
+
+.minicube {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	transform: scale(30%);
+	bottom: 48%
+}
+
+.minicube .big {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	animation: anim_minicube 30s linear infinite;
+	transform: rotateX(-20deg) rotateY(25deg);
+}
+
+
+@keyframes anim_minicube {
+	0%{
+		transform: rotateX(-20deg) rotateY(360deg);
+	}
+
+	100% {
+		transform: rotateX(-20deg) rotateY(0deg);
+	}
+}
+
+.minicube .big span {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	background: var(--clr);
+	transform-style: preserve-3d;
+	transition: .5s;
+	transform: rotateY(calc(90deg * var(--i))) translateZ(299px);
+
+}
+
+.minicube .big span.top {
+	transform: rotateX(90deg) translateZ(299px);
+
+}
+
+.minicube .big .bottom {
+	transform: rotatex(90deg) translateZ(-299px)
+}
+
+.minicube .big .top::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	transform: translateZ(-650px);
+	background: rgba(0, 0, 0, 0.5);
+	filter: blur(60px);
+}
+
+.minicube {
+	/*margin:100%, 0, 0, 0 ;*/
+
+}
+
+.minicube .big span {
+	background: transparent;
+	border: 20px solid #ffa20d;
+	box-shadow: 0px 0px 100px #a06f00
 }
