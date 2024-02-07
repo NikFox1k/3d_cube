@@ -31,7 +31,7 @@ body {
 }
 
 
-@keyframes anim_cubed {
+@keyframes anim_cube {
 	0% {
 		transform: rotateX(-20deg) rotateY(0deg);
 	}
@@ -68,7 +68,18 @@ body {
 	border: 20px solid #ffa20d;
 	box-shadow: 0px 0px 100px #a06f00
 }
-.cube .big span.
+
+.cube .big span p {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	min-height: 100%;
+	-webkit-text-stroke: 0.5px black;
+	font-family: 'Protest Revolution', sans-serif;
+	font-size: 75px;
+	color: #a06f00;
+
+}
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .minicube .big .bottom {
@@ -80,7 +91,7 @@ body {
 	position: absolute;
 	inset: 0;
 	transform: translateZ(-650px);
-	background: rgba(0, 0, 0, 0.5);
+	background: rgbea(0, 0, 0, 0.5);
 	filter: blur(60px);
 }
 
@@ -104,8 +115,8 @@ body {
 }
 
 
-@keyframes anim_minicubef {
-	0%{
+@keyframes anim_minicube {
+	0% {
 		transform: rotateX(-20deg) rotateY(360deg);
 	}
 
@@ -154,5 +165,14 @@ body {
 	box-shadow: 0px 0px 100px #a06f00
 }
 
-/*-webkit-text-stroke:2px black;*/
+.minicube .big span p {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	min-height: 100%;
+	-webkit-text-stroke: 0.5px black;
+	font-family: 'Protest Revolution', sans-serif;
+	font-size: 75px;
+	color: #a06f00;
 
+	/*-webkit-text-stroke:2px black;*/
